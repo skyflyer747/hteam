@@ -1,4 +1,11 @@
 #ifndef _QKAS_HPP_
 #define _QKAS_HPP_
-class QKAS;
+
+#include <string>
+
+using namespace std;
+
+string encode(string toEncode);
+string decode(string toDecode);
+
 #endif // _QKAS_HPP_
