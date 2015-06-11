@@ -6,17 +6,6 @@ body,html   {
     padding-bottom: 4em;
 }
 
-@font-face {
-     font-family: "Calibri";
-     src: url('fonts/calibri_2.eot');
-     src: url('fonts/calibri_2.eot?#iefix') format('embedded-opentype'),
-     url('fonts/calibri_2.svg#Calibri') format('svg'),
-     url('fonts/calibri_2.woff') format('woff'),
-     url('fonts/calibri_2.ttf') format('truetype');
-     font-weight: normal;
-     font-style: normal;
-   }
-
 .hero    {
     color: #424242;
     text-align: left;
