@@ -22,7 +22,7 @@ In charge of making information, well, exist.
 In charge of drawing our pretty pictures.
 
 ### Plailect
-##### Marketing Lead.
+###### Marketing Lead.
 In charge of saying things that sound nice but mean nothing.
 
 # The Goal
