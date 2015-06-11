@@ -13,9 +13,11 @@ a:visited {
     color: #839496;
 }
 
-ul {
+ul li {
+    font-size: 18px;
     color: #839496;
 }
+
 h1 {
     color: #cb4b16;
 }
