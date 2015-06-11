@@ -6,20 +6,24 @@ A group of people from #httyd on irc.editingarchive.com who decided to make stuf
 # The gang
 
 ### \_MysteriousMagenta_
-###### Programming lead. 
+###### Programming Lead. 
 In charge of all things code.
 
 ### Furor
-###### Server admin/web backend. 
+###### Server Admin/Web Back-End. 
 In charge of keeping our PR stunt afloat.
 
 ### Skydoge
-###### Web frontend. 
+###### Web Front-End. 
 In charge of making information, well, exist.
 
 ### Okisiroki
-###### Graphical designer. 
+###### Graphical Designer. 
 In charge of drawing our pretty pictures.
+
+### Plailect
+##### Marketing Lead.
+In charge of saying things that sound nice but mean nothing.
 
 # The Goal
 
