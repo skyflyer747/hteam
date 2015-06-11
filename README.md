@@ -21,3 +21,7 @@ In charge of making information, well, exist.
 ###### Graphical designer. 
 In charge of drawing our pretty pictures.
 
+# The Goal
+
+######Proposed by skydoge
+Online digital goods escrow service cause there arent any shiny ones out there. Paypal/stripe integration and such
