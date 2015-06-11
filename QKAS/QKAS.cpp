@@ -2,8 +2,6 @@
 #include <vector> 
 #include <string>
 
-using namespace std;
-
 char cheatsheet[] = {
     'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 
     'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 
@@ -30,13 +28,13 @@ int getIndexOf(char toFind) {
 /*
  * This function executes the process described above.
  */
-string getRepr(char base) {
+std::string getRepr(char base) {
     char toUse = islower(base) ? reprLowercase : reprUppercase;
     int amount = getIndexOf(base);
-    string repr = "";
+    std::string repr = "";
     /*
      * Basically means 'if char is a-z'.
-     * Simpler doing this than a string conversion.
+     * Simpler doing this than astd::string conversion.
      */
     if (amount > -1) {
         for (int i=0; i <= amount; ++i) {
@@ -50,13 +48,13 @@ string getRepr(char base) {
 }
 
 /*
- * 'Encodes' a full string.
+ * 'Encodes' a fullstd::string.
  * Basically runns the process described above over and over.
  * Ain't it fun?
  */
-string encode(string toEncode) {
+std::string encode(std::string toEncode) {
     char current;
-    string encoded = "";
+    std::string encoded = "";
     for (unsigned int cl=0; cl < toEncode.length(); ++cl) {
         current = toEncode.at(cl);
         encoded += getRepr(current);
@@ -67,11 +65,11 @@ string encode(string toEncode) {
     return encoded;
 }
 
-vector<vector<char> > makeVector(string toTokenize) {
+std::vector<std::vector<char> > makeVector(std::string toTokenize) {
     char current;
-    vector<vector<char> > tokens;
+    std::vector<std::vector<char> > tokens;
     unsigned int tokenIndex = 0;
-    string decoded;
+    std::string decoded;
     for (unsigned int i=0; i < toTokenize.length(); ++i) {
         current = toTokenize.at(i);
         if (current == reprSeparator) {
@@ -83,7 +81,7 @@ vector<vector<char> > makeVector(string toTokenize) {
         }
         else {
             if (tokens.size() < tokenIndex+1) {
-                tokens.push_back(vector<char>());
+                tokens.push_back(std::vector<char>());
             }
             tokens[tokenIndex].push_back(current);
         }
@@ -91,10 +89,10 @@ vector<vector<char> > makeVector(string toTokenize) {
     return tokens;
 }
 
-string decode(string toDecode) {
-    vector<vector<char> > vectorized = makeVector(toDecode);
+std::string decode(std::string toDecode) {
+    std::vector<std::vector<char> > vectorized = makeVector(toDecode);
     char current;
-    string decoded = "";
+    std::string decoded = "";
     for (unsigned int i=0; i < vectorized.size(); ++i) {
         for (unsigned int j=0; j < vectorized[i].size(); ++j) {
             current = vectorized[i][j];
