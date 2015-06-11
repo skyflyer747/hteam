@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector> 
 #include <string>
+#include <cstring>
 
 char cheatsheet[] = {
     'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 
@@ -11,48 +12,54 @@ char reprUppercase = '+';
 char reprLowercase = '-';
 char reprSeparator = 'o';
 
-
-/*
- * Gets the index of a char inside the cheat sheet.
- */
-int getIndexOf(char toFind) {
-    //                V Length of cheatsheet
-    for (int i=0; i < 26; ++i) {
-        if (cheatsheet[i] == tolower(toFind)) {
-            return i;
+class QKAS {
+    private:
+        /*
+         * Gets the index of a char inside the cheat sheet.
+         */
+        static int getIndexOf(char toFind) {
+            /*
+             * Technically cheatsheet is a C-style string.
+             * Mostly because it's a char[].
+             */
+            for (unsigned int i=0; i < strlen(cheatsheet); ++i) {
+                if (cheatsheet[i] == tolower(toFind)) {
+                    return i;
+                }
+            }
+            return -1;
         }
-    }
-    return -1;
-}
 
-/*
- * This function executes the process described above.
- */
-std::string getRepr(char base) {
-    char toUse = islower(base) ? reprLowercase : reprUppercase;
-    int amount = getIndexOf(base);
-    std::string repr = "";
-    /*
-     * Basically means 'if char is a-z'.
-     * Simpler doing this than astd::string conversion.
-     */
-    if (amount > -1) {
-        for (int i=0; i <= amount; ++i) {
-            repr += toUse;
+        /*
+         * This function executes the process described above.
+         */
+        static std::string getRepr(char base) {
+            char toUse = islower(base) ? reprLowercase : reprUppercase;
+            int amount = getIndexOf(base);
+            std::string repr = "";
+            /*
+             * Basically means 'if char is a-z'.
+             * Simpler doing this than astd::string conversion.
+             */
+            if (amount > -1) {
+                for (int i=0; i <= amount; ++i) {
+                    repr += toUse;
+                }
+            }
+            else {
+                repr += base;
+            }
+            return repr;
         }
-    }
-    else {
-        repr += base;
-    }
-    return repr;
-}
 
+
+    public:
 /*
  * 'Encodes' a fullstd::string.
  * Basically runns the process described above over and over.
  * Ain't it fun?
  */
-std::string encode(std::string toEncode) {
+static std::string encode(std::string toEncode) {
     char current;
     std::string encoded = "";
     for (unsigned int cl=0; cl < toEncode.length(); ++cl) {
@@ -65,7 +72,7 @@ std::string encode(std::string toEncode) {
     return encoded;
 }
 
-std::vector<std::vector<char> > makeVector(std::string toTokenize) {
+static std::vector<std::vector<char> > makeVector(std::string toTokenize) {
     char current;
     std::vector<std::vector<char> > tokens;
     unsigned int tokenIndex = 0;
@@ -89,7 +96,7 @@ std::vector<std::vector<char> > makeVector(std::string toTokenize) {
     return tokens;
 }
 
-std::string decode(std::string toDecode) {
+static std::string decode(std::string toDecode) {
     std::vector<std::vector<char> > vectorized = makeVector(toDecode);
     char current;
     std::string decoded = "";
@@ -112,3 +119,4 @@ std::string decode(std::string toDecode) {
     return decoded;
 }
 
+};
