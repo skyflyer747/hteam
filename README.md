@@ -5,7 +5,7 @@ A group of people from #httyd on irc.editingarchive.com who decided to make stuf
 
 # The gang
 
-### _MysteriousMagenta_
+### \_MysteriousMagenta_
 ###### Programming lead. 
 In charge of all things code.
 
