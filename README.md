@@ -5,13 +5,21 @@ A group of people from #httyd on irc.editingarchive.com who decided to make stuf
 
 ## _MysteriousMagenta_
 
-So mysterious.
+### Programming lead. 
+In charge of all things code.
 
 ## Furor
 
-wows.
+### Server admin/web backend. 
+In charge of keeping our PR stunt afloat.
 
 ## Skydoge
 
-wowz
+### Web frontend. 
+In charge of making information, well, exist.
+
+## Okisiroki
+
+### Graphical designer. 
+In ccharge of drawing our pretty pictures.
 
