@@ -54,8 +54,8 @@ $(document).ready(function() {
     }
 
     function updateUpgrades() {
-        var upgradeTable = $("#upgrades");
-        var tableContents = "<tbody>";
+        var upgradeTable = $("#upgrades tbody");
+        upgradeTable.html("")
         for (var i=0; i < gameState.upgrades.length; ++i) {
             var current = gameState.upgrades[i];
             var currentObject = $("<span index=\"" + i + "\" class=\"upgradeData\"></span>");
@@ -63,12 +63,13 @@ $(document).ready(function() {
             currentObject.click(function() {
                 var upgradeData = gameState.upgrades[$(this).get("index")];
                 console.log(upgradeData);
+                updateUpgrades();
             });
+            upgradeTable.appendChild(currentObject); 
         }
-        upgradeTable.html(tableContents);
     }
 
     $("#moneyButton").click(moneyClick);
     setInterval(updateDisplay, 100);
-    setInterval(updateUpgrades, 100);
+    setInterval(updateUpgrades, 1000);
 });
