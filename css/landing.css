@@ -42,7 +42,6 @@ body,html   {
 
 a   {
     text-decoration: none;
-    color: #fafafa;
 }
 
 .button {
@@ -50,7 +49,8 @@ a   {
     display: inline-block;
     padding: 14px 16px 14px 16px;
     font-weight: 500;
-    margin: 0 0 0 0;
+    margin: 0 0 1em 0;
+    color: #fafafa
 }
 
 .button:active  {
@@ -104,16 +104,19 @@ a   {
 .f  {
     font-size: 12pt   ;
     margin-top: -12px
-
 }
 .card   {
     width: 18em;
     height: 12em;
     text-align: left;
     display: inline-block;
-    margin: .8em;
-    margin-bottom: -2em;
+    margin-bottom: -3em;
+    padding: 1em 1em 1em 1em;
+    color: #424242
+}
 
+.card:active    {
+    background-color: rgba(0, 0, 0, 0.21);  
 }
 
 @media screen and (max-width: 60em) {
@@ -130,7 +133,8 @@ a   {
     max-width: 70em; 
     margin: auto;
     padding-left: 3em;
-    max-height: 48em;
-    overflow: hidden
-    
+    max-height: 52em;
+    overflow: hidden;
+    color: #424242;
+    margin-bottom: 4em;
 }
