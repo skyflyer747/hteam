@@ -3,7 +3,9 @@ $(document).ready(function() {
         "money": 0,
         "areas": 0,
         // Delay between progress bar increments.
-        "incrDel": 100
+        "incrDel": 100,
+        // Initial progress bar filling.
+        "startProgr": 0,
     };
 
 
@@ -20,7 +22,7 @@ $(document).ready(function() {
     function moneyClick(millis) {
         console.log("MILLIS: " + millis);
         if (isNaN(millis)) {
-            millis = 1000;
+            millis = gameState.startProgr;
         }
         else if (millis >= 100) {
             gameState.money += 1; 
