@@ -58,6 +58,7 @@ $(document).ready(function() {
         for (var i=0; i < gameState.upgrades.length; ++i) {
             var current = gameState.upgrades[i];
             var currentObject = $("<span index=\"" + i + "\" class=\"upgradeData\"></span>");
+            console.log(current);
             currentObject.html(current.name);
             currentObject.click(function() {
                 var upgradeData = gameState.upgrades[$(this).get("index")];
