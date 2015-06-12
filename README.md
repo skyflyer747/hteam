@@ -1,4 +1,4 @@
-# H-Team
+# H-Team http://skyflyer747.github.io/hteam/ <-- LANDING PAGE!
 A group of people from #httyd on irc.editingarchive.com who decided to make stuff...
 
 
