@@ -25,6 +25,11 @@ body {
     border-radius: 10%;
 }
 
+.buttonLike:hover   {
+    cursor:pointer
+    
+}
+
 .header {
     color: #cb4b16;
 }
