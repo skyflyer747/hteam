@@ -16,6 +16,7 @@ $(document).ready(function() {
     }
 
     function moneyClick(millis) {
+        console.log(millis);
         if (millis === null) {
             millis = 1000;
         }
