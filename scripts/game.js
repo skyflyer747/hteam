@@ -8,6 +8,16 @@ $(document).ready(function() {
         "startProgr": 0,
         // Self explanatory.
         "barFilling": false,
+        "upgrades": [
+            {
+                "name": "Mechanical Wings",
+                "effect": {
+                    "target": "incrDel",
+                    "action": "decrease",
+                    "amount": 10,
+                }
+            },
+        ],
     };
 
 
@@ -43,6 +53,22 @@ $(document).ready(function() {
         );
     }
 
+    function updateUpgrades() {
+        var upgradeTable = $("#upgrades");
+        var tableContents = "<tbody>";
+        for (int i=0; i < gameState.upgrades.length; ++i) {
+            var current = gameState.upgrades[i];
+            var currentObject = $("<span index=\"" + i + "\" class=\"upgradeData\"></span>");
+            currentObject(current.name);
+            currentObject.click(function() {
+                var upgradeData = gameState.upgrades[$(this).get("index")];
+                console.log(upgradeData);
+            });
+        }
+        upgradeTable.html(tableContents);
+    }
+
     $("#moneyButton").click(moneyClick);
     setInterval(updateDisplay, 100);
+    setInterval(updateUpgrades, 100);
 });
