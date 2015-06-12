@@ -1,0 +1,14 @@
+
+#moneyButton {
+    color: red;
+    border: 10px red solid;
+    border-radius: 10%;
+}
+
+#moneyDisplay {
+    /* 
+     * Need to set some proper colors.
+    */
+    color: green;
+
+}
