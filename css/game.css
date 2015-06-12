@@ -44,15 +44,19 @@ body {
     color: #cb4b16;
 }
 
-#friends tb, #upgrades tb {
-
+.upgradeData {
+    font-size: 2em;
+    border-radius: 10%;
+    border: 1px solid #d33682;
+    background-color: #d33682; 
 }
 
 #exploreBar {
 		width: 400px;
 		height: 22px;
-		border: 1px solid #111;
-		background-color: #292929;
+		border: 1px solid #eee8d5;
+        border-radius: 10%;
+		background-color: #eee8d5;
 }
 
 #exploreBar div {
@@ -61,6 +65,6 @@ body {
 		text-align: right;
 		line-height: 100%;
  		width: 0;
-		background-color: #0099ff;
+		background-color: #859900;
 }
 
