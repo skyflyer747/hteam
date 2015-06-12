@@ -45,15 +45,15 @@ body {
 }
 
 #exploreBar {
-    font-size 2em;
     color: #cb4b16;
 }
 
 .upgradeData {
     font-size: 2em;
     border-radius: 10%;
-    border: 1px solid #d33682;
-    background-color: #d33682; 
+    color: #859900;
+    border: 1px solid #cb4b16;
+    background-color: #cb4b16; 
 }
 
 #exploreBar {
@@ -69,7 +69,7 @@ body {
 		text-align: right;
 		line-height: 100%;
  		width: 0;
-		background-color: #859500;
+		background-color: #859900;
 }
 
 #exploreBar, #exploreBar div {
