@@ -11,13 +11,11 @@ body {
 
 #moneyButton {
     background-color: #cb4b16;
-    position: absolute;
     border: 10px #cb4b16 solid;
     border-radius: 10%;
 }
 
 #moneyDisplay {
     color: #859900;
-    position: absolute;
     font-size: 3em;
 }
