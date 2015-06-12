@@ -18,6 +18,7 @@ $(document).ready(function() {
                 }
             },
         ],
+        "boughtUpgrades": [],
     };
 
 
@@ -63,10 +64,19 @@ $(document).ready(function() {
             currentObject.html(current.name);
             currentObject.click(function() {
                 var upgradeData = gameState.upgrades[$(this).get("index")];
-                console.log(upgradeData);
+                gameState.upgrades.splice($(this).get("index"), 1);
+                gameState.boughtUpgrades.push(upgradeData);
+                handleUpgrade(upgradeData);
                 updateUpgrades();
             });
             upgradeTable.append(currentObject); 
+        }
+    }
+
+    function handleUpgrade(data) {
+        switch (data.action) {
+            case "decrease":
+                gameData[data.target] -= data.amount;
         }
     }
 
