@@ -6,7 +6,6 @@ $(document).ready(function() {
     $("#moneyButton").click(function() {
         
         gameState.money += 1;
-        progressJs("#exploreBar").start().autoIncrease(10, 100);
     });    
 
     function updateDisplay() {
