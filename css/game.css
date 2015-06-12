@@ -1,14 +1,23 @@
 
+/*
+ * Any of you guys know some good colors?
+ * -MM
+ */
+
+body {
+    font-size: 2em;
+    background-color: #002b36;
+}
+
 #moneyButton {
-    color: red;
-    border: 10px red solid;
+    background-color: #cb4b16;
+    position: absolute;
+    border: 10px #cb4b16 solid;
     border-radius: 10%;
 }
 
 #moneyDisplay {
-    /* 
-     * Need to set some proper colors.
-    */
-    color: green;
-
+    color: #859900;
+    position: absolute;
+    font-size: 3em;
 }
