@@ -9,13 +9,33 @@ body {
     background-color: #002b36;
 }
 
+/*
+ * Buttons shouldn't be selectable.
+ */
+.buttonLike, .noSelect {
+    -webkit-user-select: none;   
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.buttonLike {
+    border: 10px #002b36 solid;
+    border-radius: 10%;
+}
+
+.header {
+    color: #002b36;
+}
+
 #moneyButton {
     background-color: #cb4b16;
-    border: 10px #cb4b16 solid;
-    border-radius: 10%;
+    border-color: #cb4b16;
 }
 
 #moneyDisplay {
     color: #859900;
     font-size: 3em;
 }
+
