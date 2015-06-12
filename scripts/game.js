@@ -11,25 +11,22 @@ $(document).ready(function() {
 
 
     function updateDisplay() {
-        $("#moneyDisplay").html("€" + gameState.money);
+        $("#moneyDisplay").html(gameState.money + " Areas");
     };
 
-    function progress(percent, $element) {
+    function progress(percent, $element, time, afterwards) {
         var progressBarWidth = percent * $element.width() / 100;
-        $element.find("div").animate({ width: progressBarWidth }, 500).html(percent + "%&nbsp;");
+        $element.find("div").animate({ width: progressBarWidth }, time || 500);
     }
 
-    function moneyClick(millis) {
-        console.log("MILLIS: " + millis);
-        if (isNaN(millis)) {
-            millis = gameState.startProgr;
-        }
-        else if (millis >= 100) {
-            gameState.money += 1; 
-            return;    
-        }
-        progress(millis, $("#exploreBar"))
-        setTimeout(moneyClick(millis+1), gameState.incrDel);
+    function moneyClick() {
+        progress(100, 
+                 $("#exploreBar"), 
+                 gameState.incrDel*100,
+                 function() {
+                    gameState.money += 1;
+                 }
+        );
     }
 
     $("#moneyButton").click(moneyClick);
