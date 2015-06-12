@@ -16,8 +16,8 @@ $(document).ready(function() {
     }
 
     function moneyClick(millis) {
-        console.log(millis);
-        if (millis+0 === NaN) {
+        console.log("MILLIS: " + millis);
+        if (isNaN(millis)) {
             millis = 1000;
         }
         else if (millis < 1) {
