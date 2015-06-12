@@ -39,6 +39,11 @@ body {
     font-size: 3em;
 }
 
+#exploreBar {
+    font-size 2em;
+    color: #cb4b16;
+}
+
 #friends tb, #upgrades tb {
 
 }
