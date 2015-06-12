@@ -3,7 +3,6 @@ body,html   {
     background-color: #FAFAFA;
     margin: 0;
     text-align: center;
-    padding-bottom: 4em;
 }
 
 .hero    {
@@ -85,10 +84,7 @@ a   {
 
 .head   {
     font-size: 25pt;
-    text-align: c;
-    margin-bottom: 0;
     margin-top: 0
-        
 }
 
 .o  {
@@ -136,5 +132,24 @@ a   {
     max-height: 50em;
     overflow: hidden;
     color: #424242;
-    margin-bottom: 4em;
+    margin-bottom: 6em;
+}
+
+#footer {
+    background-color: #555555     
+}
+
+.foot   {
+    padding: 3em;
+    margin: 0;
+    font-size: 13pt;
+    color: #ededed;    
+}
+
+.foott  {
+    margin-top: -6em;
+    padding: 4em;
+    color: #ededed;
+    font-size: 10pt;
+    margin-bottom: 0
 }
