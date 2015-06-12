@@ -11,5 +11,5 @@ $(document).ready(function() {
         $("#moneyDisplay").html("€" + gameState.money);
     };
 
-    setinterval(100, updateDisplay);
+    setInterval(100, updateDisplay);
 });
