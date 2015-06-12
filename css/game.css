@@ -60,7 +60,6 @@ body {
 		width: 400px;
 		height: 22px;
 		border: 1px solid #cb4b16;
-        border-radius: 10%;
 		background-color: #cb4b16;
 }
 
@@ -70,7 +69,10 @@ body {
 		text-align: right;
 		line-height: 100%;
  		width: 0;
-        border-radius: 10%;
 		background-color: #859500;
+}
+
+#exploreBar, #exploreBar div {
+    border-radius: 100%; 
 }
 
