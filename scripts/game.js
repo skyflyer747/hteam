@@ -20,11 +20,12 @@ $(document).ready(function() {
         if (isNaN(millis)) {
             millis = 1000;
         }
-        else if (millis < 1) {
+        else if (millis >= 100) {
+            gameState.money += 1; 
             return;    
         }
-        progress(millis/100, $("#exploreBar"));
-        setTimeout(function () {moneyClick(millis-100)}, 100);
+        progress(millis, $("#exploreBar"))
+        setTimeout(moneyClick(millis+1), 1);
     }
 
     $("#moneyButton").click(moneyClick);
