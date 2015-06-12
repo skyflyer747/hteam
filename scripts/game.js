@@ -65,7 +65,7 @@ $(document).ready(function() {
                 console.log(upgradeData);
                 updateUpgrades();
             });
-            upgradeTable.appendChild(currentObject); 
+            upgradeTable.append(currentObject); 
         }
     }
 
