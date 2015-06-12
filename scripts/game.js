@@ -4,12 +4,15 @@ $(document).ready(function() {
         "areas": 0
     };
     $("#moneyButton").click(function() {
+        
         gameState.money += 1;
+        setTimeout(progressJs("#exploreBar").end(), 100);
     });    
 
     function updateDisplay() {
         $("#moneyDisplay").html("€" + gameState.money);
     };
+
 
     setInterval(updateDisplay, 100);
 });
