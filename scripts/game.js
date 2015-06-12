@@ -56,7 +56,7 @@ $(document).ready(function() {
     function updateUpgrades() {
         var upgradeTable = $("#upgrades");
         var tableContents = "<tbody>";
-        for (int i=0; i < gameState.upgrades.length; ++i) {
+        for (var i=0; i < gameState.upgrades.length; ++i) {
             var current = gameState.upgrades[i];
             var currentObject = $("<span index=\"" + i + "\" class=\"upgradeData\"></span>");
             currentObject(current.name);
