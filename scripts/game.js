@@ -17,6 +17,9 @@ $(document).ready(function() {
     function progress(percent, $element, time, afterwards) {
         var progressBarWidth = percent * $element.width() / 100;
         $element.find("div").animate({ width: progressBarWidth }, time || 500);
+        if (typeof afterwards === "function") {
+            afterwards()
+        }
     }
 
     function moneyClick() {
@@ -25,6 +28,9 @@ $(document).ready(function() {
                  gameState.incrDel*100,
                  function() {
                     gameState.money += 1;
+                    progress(0,
+                             $("#exploreBar"),
+                             10);
                  }
         );
     }
