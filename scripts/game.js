@@ -1,7 +1,9 @@
 $(document).ready(function() {
     var gameState = {
         "money": 0,
-        "areas": 0
+        "areas": 0,
+        // Delay between progress bar increments.
+        "incrDel": 100
     };
 
 
@@ -25,7 +27,7 @@ $(document).ready(function() {
             return;    
         }
         progress(millis, $("#exploreBar"))
-        setTimeout(moneyClick(millis+1), 1);
+        setTimeout(moneyClick(millis+1), gameState.incrDel);
     }
 
     $("#moneyButton").click(moneyClick);
