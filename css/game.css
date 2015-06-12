@@ -25,7 +25,7 @@ body {
     border-radius: 10%;
 }
 
-.buttonLike:hover   {
+#exploreBar:hover, .buttonLike:hover {
     cursor:pointer
     
 }
@@ -70,9 +70,5 @@ body {
 		line-height: 100%;
  		width: 0;
 		background-color: #859900;
-}
-
-#exploreBar, #exploreBar div {
-    border-radius: 20%; 
 }
 

@@ -71,6 +71,7 @@ $(document).ready(function() {
     }
 
     $("#moneyButton").click(moneyClick);
+    $("#exploreBar").click(moneyClick);
     setInterval(updateDisplay, 100);
     setInterval(updateUpgrades, 1000);
 });
